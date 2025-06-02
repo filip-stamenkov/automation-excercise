@@ -1,0 +1,22 @@
+{
+  "person": {
+    "name": "John",
+    "email": "personTeseeet133213223333433322@gmail.com",
+    "title": "Mr.",
+    "firstName": "John",
+    "lastName": "Doe",
+    "company" : "Test Company",
+    "address": "Test address",
+    "address2": "Test address 2",
+    "country" : "United States",
+    "state": "California",
+    "city": "Los Angeles",
+    "zipcode": "90001",
+    "mobileNumber": "1234567890",
+    "password": "password123",
+    "dayOfBirth": "1",
+    "monthOfBirth": "January",
+    "yearOfBirth": "1998",
+    "newsletter": true
+  }
+}
