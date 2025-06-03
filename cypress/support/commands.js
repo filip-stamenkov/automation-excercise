@@ -64,6 +64,14 @@ Cypress.Commands.add('deleteUser', (person) => {
         // expect(response.body).to.equal("User created!")        
   })
 });
+
+Cypress.Commands.add('scrollToBottom', () => {
+    cy.scrollTo('bottom');
+});
+
+Cypress.Commands.add('scrollToTop', () => {
+    cy.scrollTo('top');
+});
 //
 //
 // -- This is a child command --
