@@ -4,7 +4,7 @@ import {navBar} from '../pages/navigationBar.js';
 import {nual} from '../pages/newUserAndLogin.js';
 import {signUpUser} from '../pages/signUpPage.js';
 
-describe('Register and Login functionality', () => {
+describe('Register and Login test cases', () => {
 
     beforeEach(() => {
 
@@ -15,7 +15,7 @@ describe('Register and Login functionality', () => {
     })
 
     it('Should register a new user', () => {
-
+    // Test Case 1: Register User
         navBar.signUpLogIn();
         //click the Signup/Login button and view the signup/login forms
 
@@ -36,7 +36,7 @@ describe('Register and Login functionality', () => {
     });
 
     it('Login User with correct email and password', () => {
-
+    // Test Case 2: Login User with correct email and password
         cy.createUser(person);
 
         navBar.signUpLogIn();
@@ -47,20 +47,22 @@ describe('Register and Login functionality', () => {
 
         navBar.deleteUser();
 
-        
-
     });
 
     it('Login User with incorrect email and password', () => {
+    // Test Case 3: Login User with incorrect email and password
 
         navBar.signUpLogIn();
 
         nual.loginUser(incorrectCredentials);
 
         nual.elements.verifyWrongCredentialsText();
+
     });
 
     it('Should logout the user', () => {
+    // Test Case 4: Logout User
+
         cy.createUser(person);
 
         navBar.signUpLogIn();
@@ -72,14 +74,17 @@ describe('Register and Login functionality', () => {
         navBar.logoutUser();
 
         cy.url().should('contain', '/login')
+
     });
 
     it.only('Should Try to register user with existing email', () => {
+    // Test Case 5: Register User with existing email
         navBar.signUpLogIn();
 
         nual.signUpUser(credentials);
 
         nual.elements.verfiyAccountExistsText();
+        
     });
 
     afterEach(() => {
