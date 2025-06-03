@@ -77,14 +77,14 @@ describe('Register and Login test cases', () => {
 
     });
 
-    it.only('Should Try to register user with existing email', () => {
+    it('Should Try to register user with existing email', () => {
     // Test Case 5: Register User with existing email
         navBar.signUpLogIn();
 
         nual.signUpUser(credentials);
 
         nual.elements.verfiyAccountExistsText();
-        
+
     });
 
     afterEach(() => {
