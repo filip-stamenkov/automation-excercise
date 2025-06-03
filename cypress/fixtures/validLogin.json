@@ -1,0 +1,13 @@
+{
+  "credentials": {
+    "name": "TestUserF",
+    "email": "testmailf@gmail.com",
+    "password": "pass1234"
+  },
+
+  "incorrectCredentials": {
+    "name": "randomUser",
+    "email": "random@gmail.com",
+    "password": "wrongPassword"
+  }
+}

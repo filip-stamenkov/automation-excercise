@@ -1,7 +1,7 @@
 {
   "person": {
     "name": "John",
-    "email": "personTeseeet133213223333433322@gmail.com",
+    "email": "personfiltest@gmail.com",
     "title": "Mr.",
     "firstName": "John",
     "lastName": "Doe",
@@ -13,7 +13,7 @@
     "city": "Los Angeles",
     "zipcode": "90001",
     "mobileNumber": "1234567890",
-    "password": "password123",
+    "password": "password123a",
     "dayOfBirth": "1",
     "monthOfBirth": "January",
     "yearOfBirth": "1998",
