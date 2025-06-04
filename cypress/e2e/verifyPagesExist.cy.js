@@ -1,7 +1,7 @@
 import { navBar } from "../pages/navigationBar";
 import { productsP } from "../pages/productsPage";
 import { nual } from "../pages/newUserAndLogin";
-import { credentials } from "../fixtures/validLogin.json";
+import { credentials } from "../fixtures/loginData.json";
 
 describe('Verify certain pages exist and can be navigated to', () => {
 
@@ -33,4 +33,5 @@ describe('Verify certain pages exist and can be navigated to', () => {
     productsP.verifyProductDetailsVisible();
 
     });
+    
 });

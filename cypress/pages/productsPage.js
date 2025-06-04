@@ -1,4 +1,5 @@
 class productsPage{
+
     elements = {
         featureItems:() => cy.get('.features_items'),
         firstProduct:() => cy.get(':nth-child(3) > .product-image-wrapper > .choose > .nav > li > a'),
@@ -30,6 +31,5 @@ class productsPage{
         this.elements.productBrand().should('be.visible').and('contain', 'Brand');
     }
 }
-
 
 export const productsP = new productsPage();

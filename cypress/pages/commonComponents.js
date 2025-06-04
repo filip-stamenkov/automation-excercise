@@ -1,5 +1,6 @@
 
 class commonComponents{
+
     elements = {
         continueBtn:() => cy.get('[data-qa="continue-button"]'),
         scrollUpBtn:() => cy.get('#scrollUp'),
@@ -17,6 +18,5 @@ class commonComponents{
         cy.get('.alert-success').should('contain', 'You have been successfully subscribed!');
     }
 }
-
 
 export const common = new commonComponents();

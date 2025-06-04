@@ -1,5 +1,5 @@
 import {person} from '../fixtures/testData.json';
-import {credentials, incorrectCredentials} from '../fixtures/validLogin.json';
+import {credentials, incorrectCredentials} from '../fixtures/loginData.json';
 import {navBar} from '../pages/navigationBar.js';
 import {nual} from '../pages/newUserAndLogin.js';
 import {signUpUser} from '../pages/signUpPage.js';
