@@ -19,12 +19,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # adjust if necessary
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cypress tests
+      - name: Run Cypress tests in specific folder
         uses: cypress-io/github-action@v6
         with:
-          install: false # already installed via npm install
+          install: false
+          command: npx cypress run --spec "cypress/e2e/*.cy.{js,ts}"
