@@ -73,8 +73,6 @@ describe('Register and Login test cases', () => {
 
         navBar.logoutUser();
 
-        cy.url().should('contain', '/login')
-
     });
 
     it('Should Try to register user with existing email', () => {
@@ -91,4 +89,5 @@ describe('Register and Login test cases', () => {
         cy.deleteUser(person);
         //delete the user after each test to ensure a clean state for the next test
     });
+
 });

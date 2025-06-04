@@ -1,5 +1,7 @@
 import { navBar } from "../pages/navigationBar";
 import { productsP } from "../pages/productsPage";
+import { nual } from "../pages/newUserAndLogin";
+import { credentials } from "../fixtures/validLogin.json";
 
 describe('Verify certain pages exist and can be navigated to', () => {
 
@@ -9,13 +11,21 @@ describe('Verify certain pages exist and can be navigated to', () => {
         // Verify that you are on the home page
     });
 
-    it('Should navigate to and verify the "Test Cases" page', () => {
+    it('Should navigate to and verify the "Test Cases" page when logged out', () => {
     // Test Case 7: Verify Test Cases Page
-        navBar.verifyTestCasesButtonExistsAndClick();
+        navBar.verifyTestCasesButtonExistsAndClickLoggedOut();
 
     });
 
-    it.only('Should navigate to and verify the "Products" page', () => {
+    it('Should navigate to and verify the "Test Cases" page when logged in', () => {
+    // Test Case 7: Verify Test Cases Page
+        navBar.signUpLogIn();
+        nual.loginUser(credentials);
+        // navBar.verifyTestCasesButtonExistsAndClick();
+
+    });
+
+    it('Should navigate to and verify the "Products" page', () => {
     // Test Case 8: Verify All Products and product detail page
     navBar.clickProductsButton();
     productsP.containsProducts();

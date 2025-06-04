@@ -42,8 +42,10 @@ Cypress.Commands.add('createUser', (person) => {
             "birth_year": person.year,
         },
      }).then((response) => {
+        console.log(response.body);
         expect(response.status).to.eq(200)
-        // expect(response.body).to.equal("User created!")        
+        expect(response.body).contains(201);    
+        expect(response.body).contains("User created!");
   });
 });
 
