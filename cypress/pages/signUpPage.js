@@ -20,11 +20,11 @@ class signUpPage{
         cityInput:() => cy.get('[data-qa="city"]'),
         zipcodeInput:() => cy.get('[data-qa="zipcode"]'),
         mobileNumberInput:() => cy.get('[data-qa="mobile_number"]'),
-        createAccountButton:() => cy.get('[data-qa="create-account"]'),
-        verifyAccountCreated:() => cy.contains('Account Created!').should('be.visible'),
+        createAccountButton:() => cy.get('[data-qa="create-account"]')
     }
 
     createAccount(person){
+        // fills in the account creation form with the provided person's details and submits it
         this.elements.verifyEnterAccInfoVisible();
         this.elements.nameInput().should('have.value', person.name);
         this.elements.emailInput().should('have.value', person.email);
@@ -49,7 +49,8 @@ class signUpPage{
     }
 
     verifyAccountCreated(){
-        this.elements.verifyAccountCreated();
+        // verifies that the account creation was successful by checking for the confirmation message
+        cy.contains('Account Created!').should('be.visible')
         common.elements.continueBtn().click();
     }
 }

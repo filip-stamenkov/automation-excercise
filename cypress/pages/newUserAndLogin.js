@@ -11,6 +11,7 @@ class newUserAndLogin{
     }
 
     signUpUser(person){
+        // signs up a new user by filling in the name and email fields, then clicking the sign up button
         this.elements.verifyNewUserPageText();
         this.elements.signUpNameInput().type(person.name);
         this.elements.signUpEmailInput().type(person.email);   
@@ -18,6 +19,7 @@ class newUserAndLogin{
     }
 
     loginUser(data){
+        // logs in a user by filling in the email and password fields, then clicking the login button
         this.elements.verifyLoginPageText();
         cy.get('[data-qa="login-email"]').type(data.email); 
         cy.get('[data-qa="login-password"]').type(data.password);
